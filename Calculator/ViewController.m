@@ -31,14 +31,15 @@ typedef enum opr operator;
     UIButton *btn = (UIButton *) sender;
     int value = (int)btn.tag;
     
+    currentValue = currentValue * 10 + value;
     
-    if(currentOpr == none){
-        currentValue = currentValue * 10 + value;
-    }
-    else{
-        currentValue = value;
-        
-    }
+//    if(currentOpr == none){
+//        
+//    }
+//    else{
+//        currentValue = value;
+//        
+//    }
     
     
     
@@ -73,6 +74,7 @@ typedef enum opr operator;
     }
     
     [calc setAccumulator:currentValue];
+    currentValue = 0;
     
         
     
